@@ -1,5 +1,7 @@
 # homedo-vue3-boilerplate
 
+⚠️⚠️ 功能开发中... ⚠️⚠️
+
 基于 Vue3 + Ant Design 的中后台系统模板仓库, 用于加快前端的研发速度, 由河姆渡浦东研发中心开发和维护
 
 ![](./doc/preview.png)
