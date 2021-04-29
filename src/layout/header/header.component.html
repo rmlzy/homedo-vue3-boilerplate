@@ -1,0 +1,28 @@
+<a-layout-header class="layout-header">
+  <div class="left-options"></div>
+  <div class="right-options">
+    <bell-outlined />
+    <Dropdown>
+      <div class="user-name">
+        <a-avatar>
+          <user-outlined />
+        </a-avatar>
+        <span>{{ username || "用户名" }}</span>
+      </div>
+      <template #overlay>
+        <a-menu>
+          <a-menu-item>
+            <a href="javascript:;">个人中心</a>
+          </a-menu-item>
+          <a-menu-divider />
+          <a-menu-item>
+            <a @click.prevent="doLogout">
+              <poweroff-outlined />
+              <span>退出登录</span>
+            </a>
+          </a-menu-item>
+        </a-menu>
+      </template>
+    </Dropdown>
+  </div>
+</a-layout-header>

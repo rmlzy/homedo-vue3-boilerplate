@@ -1,0 +1,62 @@
+<div class="login">
+  <div class="login__inner">
+    <div class="login__wrap">
+      <img class="login__banner" src="@/assets/images/login-banner.png" />
+      <a-form
+        ref="formRef"
+        class="login__form"
+        layout="vertical"
+        :model="formData"
+        :rules="formRules"
+      >
+        <div class="login__form__title">账号密码登录</div>
+
+        <a-form-item name="username">
+          <a-input
+            v-model:value="formData.username"
+            size="large"
+            placeholder="请输入手机号"
+          >
+            <template #prefix>+86</template>
+          </a-input>
+        </a-form-item>
+
+        <a-form-item name="password">
+          <password-input v-model:value="formData.password"></password-input>
+        </a-form-item>
+
+        <a-form-item>
+          <div class="login__remember">
+            <a-checkbox v-model="formData.remember">记住密码</a-checkbox>
+            <a href="">忘记密码</a>
+          </div>
+        </a-form-item>
+
+        <a-form-item>
+          <a-button
+            :loading="submitting"
+            type="primary"
+            block
+            size="large"
+            class="login__btn login__btn--submit"
+            @click="submit"
+          >
+            登录
+          </a-button>
+        </a-form-item>
+
+        <a-divider class="login__divider">OR</a-divider>
+
+        <a-form-item>
+          <a-button block size="large" class="login__btn login__btn--wechat"
+            >企业微信登录</a-button
+          >
+        </a-form-item>
+      </a-form>
+    </div>
+  </div>
+
+  <div class="login__footer">
+    <hmd-footer></hmd-footer>
+  </div>
+</div>

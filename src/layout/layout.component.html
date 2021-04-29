@@ -1,0 +1,29 @@
+<a-layout class="layout">
+  <a-layout-sider
+    v-model:collapsed="collapsed"
+    :width="280"
+    :trigger="null"
+    collapsible
+    class="layout-sider"
+  >
+    <div class="layout-sider__logo">
+      <logo :collapsed="collapsed"></logo>
+    </div>
+    <div class="layout-sider__menu">
+      <aside-menu :collapsed="collapsed"></aside-menu>
+    </div>
+    <div class="layout-sider__expand">
+      <span class="menu-fold" @click="toggleCollapsed">
+        <component
+          :is="collapsed ? 'menu-unfold-outlined' : 'menu-fold-outlined'"
+        ></component>
+      </span>
+    </div>
+  </a-layout-sider>
+  <a-layout>
+    <page-header v-model:collapsed="collapsed"></page-header>
+    <a-layout-content class="layout-content">
+      <tabs-view></tabs-view>
+    </a-layout-content>
+  </a-layout>
+</a-layout>

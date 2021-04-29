@@ -1,0 +1,36 @@
+.layout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 20px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 21, 41, 0.12);
+
+  .left-options {
+  }
+
+  .right-options {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    user-select: none;
+
+    .anticon-bell {
+      margin-right: 32px;
+    }
+  }
+
+  .user-name {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.65);
+
+    .ant-avatar {
+      margin-right: 8px;
+    }
+  }
+}

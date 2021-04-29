@@ -1,0 +1,78 @@
+@tabs-view-height: 54px;
+
+.tabs-view {
+  ::v-deep(.tabs) {
+    .ant-tabs-bar {
+      padding: 0 20px 0 0;
+      margin: 0;
+      background-color: white;
+      user-select: none;
+
+      .ant-tabs-nav-container {
+        height: @tabs-view-height;
+      }
+
+      .ant-tabs-tab {
+        position: relative;
+        padding-left: 24px;
+        padding-right: 44px;
+        height: @tabs-view-height;
+        line-height: 52px;
+        margin: 0;
+        border: none;
+        border-right: 1px solid #f0f0f0;
+        background: inherit;
+        font-size: 14px;
+        border-radius: 0;
+
+        &-active {
+          color: #2f7bff;
+          background: #eff5ff;
+
+          &:before {
+            content: "";
+            top: 0;
+            left: -1px;
+            width: calc(100% + 2px);
+            height: 2px;
+            border-radius: 0;
+            background: #2f7bff;
+          }
+        }
+
+        .ant-tabs-close-x {
+          position: absolute;
+          top: 20px;
+          right: 24px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .ant-tabs-extra-content {
+      line-height: @tabs-view-height;
+    }
+
+    .ant-tabs-tabpane {
+      display: none;
+    }
+
+    .ant-tabs-tab:not(.ant-tabs-tab-active) {
+      .anticon-close {
+        width: 0;
+        transition: width 0.3s;
+      }
+
+      &:hover .anticon-close {
+        width: 16px;
+      }
+    }
+  }
+
+  .tabs-view-content {
+    padding: 24px;
+    height: calc(100vh - 110px);
+    overflow: auto;
+    background: #f4f6f9;
+  }
+}

@@ -1,0 +1,94 @@
+<div class="tabs-view">
+  <a-tabs
+    v-model:activeKey="activeKey"
+    hide-add
+    type="editable-card"
+    class="tabs"
+    @change="changePage"
+    @edit="editTabItem"
+  >
+    <template v-for="(pageItem, index) in tabsList" :key="pageItem.fullPath">
+      <a-tab-pane>
+        <template #tab>
+          <a-dropdown :trigger="['contextmenu']">
+            <span>{{ pageItem.meta.title }}</span>
+            <template #overlay>
+              <a-menu style="user-select: none">
+                <a-menu-item
+                  key="1"
+                  :disabled="activeKey !== pageItem.fullPath"
+                  @click="reloadPage"
+                >
+                  <reload-outlined></reload-outlined>
+                  <span>刷新</span>
+                </a-menu-item>
+                <a-menu-item key="2" @click="removeTab(pageItem)">
+                  <close-outlined></close-outlined>
+                  <span>关闭</span>
+                </a-menu-item>
+                <a-menu-divider></a-menu-divider>
+                <a-menu-item key="3" @click="closeLeft(pageItem, index)">
+                  <vertical-right-outlined></vertical-right-outlined>
+                  <span>关闭左侧</span>
+                </a-menu-item>
+                <a-menu-item key="4" @click="closeRight(pageItem, index)">
+                  <vertical-left-outlined></vertical-left-outlined>
+                  <span>关闭右侧</span>
+                </a-menu-item>
+                <a-menu-divider></a-menu-divider>
+                <a-menu-item key="5" @click="closeOther(pageItem)">
+                  <column-width-outlined></column-width-outlined>
+                  <span>关闭其他</span>
+                </a-menu-item>
+                <a-menu-item key="6" @click="closeAll">
+                  <minus-outlined></minus-outlined>
+                  <span>关闭全部</span>
+                </a-menu-item>
+              </a-menu>
+            </template>
+          </a-dropdown>
+        </template>
+      </a-tab-pane>
+    </template>
+
+    <template #tabBarExtraContent>
+      <a-dropdown :trigger="['click']">
+        <a class="ant-dropdown-link" @click.prevent>
+          <down-outlined :style="{ fontSize: '20px' }"></down-outlined>
+        </a>
+        <template #overlay>
+          <a-menu style="user-select: none">
+            <a-menu-item
+              key="1"
+              :disabled="activeKey !== route.fullPath"
+              @click="reloadPage"
+            >
+              <reload-outlined></reload-outlined>
+              <span>刷新</span>
+            </a-menu-item>
+            <a-menu-item key="2" @click="removeTab(route)">
+              <close-outlined></close-outlined>
+              <span>关闭</span>
+            </a-menu-item>
+            <a-menu-divider></a-menu-divider>
+            <a-menu-item key="5" @click="closeOther(route)">
+              <column-width-outlined></column-width-outlined>
+              <span>关闭其他</span>
+            </a-menu-item>
+            <a-menu-item key="6" @click="closeAll">
+              <minus-outlined></minus-outlined>
+              <span>关闭全部</span>
+            </a-menu-item>
+          </a-menu>
+        </template>
+      </a-dropdown>
+    </template>
+  </a-tabs>
+  <div class="tabs-view-content">
+    <a-card>
+      <router-view v-slot="{ Component }">
+        <component :is="Component"></component>
+      </router-view>
+    </a-card>
+  </div>
+</div>
