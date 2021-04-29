@@ -1,6 +1,7 @@
 {
   "name": "homedo-vue3-boilerplate",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "description": "A vue3 admin boilerplate built for homedo.com",
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --mode dev",
@@ -50,5 +51,12 @@
     "prettier": "2.2.1",
     "svg-sprite-loader": "6.0.5",
     "typescript": "4.2.3"
-  }
+  },
+  "homepage": "https://github.com/rmlzy/homedo-vue3-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rmlzy/homedo-vue3-boilerplate"
+  },
+  "author": "rmlzy <rmlzy@outlook.com> (https://poppython.com)",
+  "license": "MIT"
 }

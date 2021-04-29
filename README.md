@@ -1,6 +1,6 @@
 # homedo-vue3-boilerplate
 
-Homedo Vue3 中后台模板
+A vue3 admin boilerplate built for homedo.com
 
 ## 如何使用
 
