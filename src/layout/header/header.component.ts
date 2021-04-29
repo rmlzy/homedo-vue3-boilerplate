@@ -71,20 +71,17 @@ export default defineComponent({
         title: "您确定要退出登录吗？",
         icon: createVNode(QuestionCircleOutlined),
         onOk: () => {
-          console.log(router, "退出登录");
-          store.dispatch("user/logout").then((res) => {
-            message.success("成功退出登录");
-            // 移除标签页
-            localStorage.removeItem(TABS_ROUTES);
-            router
-              .replace({
-                name: "login",
-                query: {
-                  redirect: route.fullPath,
-                },
-              })
-              .finally(() => location.reload());
-          });
+          message.success("成功退出登录");
+          // 移除标签页
+          localStorage.removeItem(TABS_ROUTES);
+          router
+            .replace({
+              name: "login",
+              query: {
+                redirect: route.fullPath,
+              },
+            })
+            .finally(() => location.reload());
         },
       });
     };

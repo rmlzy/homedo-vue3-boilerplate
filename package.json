@@ -1,6 +1,6 @@
 {
   "name": "homedo-vue3-boilerplate",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "A vue3 admin boilerplate built for homedo.com",
   "private": true,
   "scripts": {

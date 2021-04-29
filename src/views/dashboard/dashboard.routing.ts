@@ -1,3 +1,5 @@
+import { DashboardOutlined } from "@ant-design/icons-vue";
+
 export const DashboardRouting = {
   path: "/dashboard",
   name: "dashboard",
@@ -5,5 +7,5 @@ export const DashboardRouting = {
     import(
       /* webpackChunkName: "dashboard-welcome" */ "@/views/dashboard/welcome/index.vue"
     ),
-  meta: { title: "控制台" },
+  meta: { title: "控制台", icon: DashboardOutlined },
 };

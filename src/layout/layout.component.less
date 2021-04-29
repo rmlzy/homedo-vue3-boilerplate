@@ -1,3 +1,5 @@
+@side-bg: #3d3d3d;
+
 .layout {
   display: flex;
   overflow: hidden;
@@ -9,6 +11,7 @@
     padding-top: 84px;
     padding-bottom: 40px;
     z-index: 200;
+    background: @side-bg;
     box-shadow: 2px 0px 6px 0px rgba(0, 21, 41, 0.12);
 
     &__logo {
@@ -26,7 +29,7 @@
 
     &__expand {
       position: absolute;
-      background: #00152a;
+      background: @side-bg;
       z-index: 210;
       bottom: 0;
       left: 0;

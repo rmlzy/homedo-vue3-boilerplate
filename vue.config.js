@@ -17,6 +17,8 @@ module.exports = {
             "primary-color": "#2F7BFF",
             "text-color": "#505050",
             "border-color-base": "#D9D9D9",
+            "menu-dark-bg": "#3d3d3d",
+            "menu-dark-submenu-bg": "#2f2d2d"
           },
           javascriptEnabled: true,
         },

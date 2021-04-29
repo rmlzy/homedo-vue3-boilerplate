@@ -6,7 +6,7 @@
       v-bind="$attrs"
     >
       <template #title>
-        <i :class="['anticon', 'hmd-icon', menuInfo.meta.icon]"></i>
+        <component :is="menuInfo.meta?.icon"></component>
         <span>{{ menuInfo.meta?.title }}</span>
       </template>
       <template v-for="item in menuInfo.children" :key="item.name">
@@ -22,7 +22,7 @@
     </a-sub-menu>
 
     <a-menu-item v-else :key="menuInfo.name">
-      <i :class="['anticon', 'hmd-icon', menuInfo.meta.icon]"></i>
+      <component :is="menuInfo.meta?.icon"></component>
       <span>{{ menuInfo.meta?.title }}</span>
     </a-menu-item>
   </template>

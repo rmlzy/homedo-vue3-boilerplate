@@ -2,6 +2,7 @@ import { defineComponent, reactive, ref } from "vue";
 import { PasswordInput } from "./components";
 import { formRules } from "./login.constant";
 import { IFormData } from "./login.interface";
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "login-page",
@@ -9,6 +10,7 @@ export default defineComponent({
     PasswordInput,
   },
   setup() {
+    const router = useRouter();
     const submitting = ref(false);
     const formRef = ref();
     const formData: IFormData = reactive({
@@ -21,7 +23,7 @@ export default defineComponent({
       formRef.value
         .validate()
         .then(() => {
-          console.log(formData);
+          router.push("/dashboard");
         })
         .catch(() => {})
         .finally(() => {
