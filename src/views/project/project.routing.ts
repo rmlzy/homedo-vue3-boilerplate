@@ -8,6 +8,6 @@ export const ProjectRouting = {
   name: "project",
   redirect: "/project/profile/list",
   component: RouterView,
-  meta: { title: "项目备案", icon: "xiangmu" },
+  meta: { title: "项目备案" },
   children: [...ProfileRouting, ...FollowRouting, ...SolutionRouting],
 };

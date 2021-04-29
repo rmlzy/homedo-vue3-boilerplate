@@ -5,5 +5,5 @@ export const DashboardRouting = {
     import(
       /* webpackChunkName: "dashboard-welcome" */ "@/views/dashboard/welcome/index.vue"
     ),
-  meta: { title: "控制台", icon: "baobei" },
+  meta: { title: "控制台" },
 };

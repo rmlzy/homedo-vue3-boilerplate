@@ -7,7 +7,6 @@
     "dev": "vue-cli-service serve --mode dev",
     "dev:fat": "vue-cli-service serve --mode fat",
     "dev:uat": "vue-cli-service serve --mode uat",
-    "dev:pro": "vue-cli-service serve --mode pro",
     "build:dev": "cross-env NODE_ENV=production vue-cli-service build --mode dev",
     "build:fat": "cross-env NODE_ENV=production vue-cli-service build --mode fat",
     "build:uat": "cross-env NODE_ENV=production vue-cli-service build --mode uat",

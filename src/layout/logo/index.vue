@@ -1,7 +1,5 @@
 <template>
-  <div class="logo">
-    <img v-if="!collapsed" src="@/assets/images/logo.png" alt="" />
-  </div>
+  <div class="logo">河姆渡</div>
 </template>
 
 <script>
@@ -19,9 +17,8 @@ export default {
 .logo {
   padding: 16px 16px 27px;
   height: 84px;
-
-  img {
-    width: 220px;
-  }
+  font-size: 16px;
+  color: white;
+  text-align: center;
 }
 </style>

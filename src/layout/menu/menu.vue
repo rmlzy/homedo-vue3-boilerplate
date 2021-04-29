@@ -3,6 +3,7 @@
     v-model:open-keys="openKeys"
     v-model:selected-keys="selectedKeys"
     mode="inline"
+    theme="dark"
     :inline-collapsed="collapsed"
     @click="onClickMenuItem"
   >

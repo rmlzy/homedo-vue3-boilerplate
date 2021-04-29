@@ -2,7 +2,6 @@ import { DashboardRouting } from "@/views/dashboard/dashboard.routing";
 import { LoginRouting } from "@/views/login/login.routing";
 import { ErrorRouting } from "@/views/error/error.routing";
 import { ProjectRouting } from "@/views/project/project.routing";
-import { TenderRouting } from "@/views/tender/tender.routing";
 import { RouterView } from "vue-router";
 
 const NotFoundRouting = {
@@ -38,7 +37,7 @@ export const AppRouting = [
     redirect: "/dashboard",
     component: () =>
       import(/* webpackChunkName: "layout" */ "@/layout/index.vue"),
-    children: [DashboardRouting, ProjectRouting, TenderRouting],
+    children: [DashboardRouting, ProjectRouting],
   },
   LoginRouting,
   ErrorRouting,
