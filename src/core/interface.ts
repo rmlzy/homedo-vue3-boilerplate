@@ -1,18 +1,18 @@
 export interface IResponse<T> {
-  code: number;
-  message: string;
+  respCode: string;
+  respDesc: string;
   data: T;
 }
 
 export interface IPaginate<T> {
-  pageIndex: number;
-  pageSize: number;
+  current: number;
+  size: number;
   total: number;
-  items: T[];
+  records: T[];
 }
 
-export interface ITablePager {
-  pageIndex: number;
-  pageSize: number;
+export interface IPagination {
+  current: number;
+  size: number;
   total: number;
 }

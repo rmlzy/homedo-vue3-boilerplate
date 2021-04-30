@@ -30,20 +30,13 @@ interface FormItem extends Partial<typeof FormItemProps> {
   field: string; // 表单字段
   value: any; // 表单默认值
   props?: Partial<
-    | HTMLAttributes
-    | HTMLInputElement
-    | HTMLSelectElement
-    | HTMLTextAreaElement
-    | any
+    HTMLAttributes | HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | any
   >; // 表单属性
   rules?: Rule[]; // 表单验证规则
   options?: OptionItem[]; // 可选项
   eventObject?: object; // 事件对象，例如：{ mousedown: doThis, mouseup: doThat } 将会动态绑定为：v-on="{ mousedown: doThis, mouseup: doThat }"
   loading?: boolean; // 异步数据是否加载
-  asyncValue?: (
-    formItem: FormItem,
-    formInstance: ComponentInternalInstance | null
-  ) => Promise<any>; // 异步数据
+  asyncValue?: (formItem: FormItem, formInstance: ComponentInternalInstance | null) => Promise<any>; // 异步数据
   asyncOptions?: (
     formItem: FormItem,
     formInstance: ComponentInternalInstance | null

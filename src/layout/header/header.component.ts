@@ -88,9 +88,7 @@ export default defineComponent({
 
     const toggleFullscreenIcon = () =>
       (state.fullscreenIcon =
-        document.fullscreenElement !== null
-          ? "FullscreenExitOutlined"
-          : "FullscreenOutlined");
+        document.fullscreenElement !== null ? "FullscreenExitOutlined" : "FullscreenOutlined");
 
     document.addEventListener("fullscreenchange", toggleFullscreenIcon);
 

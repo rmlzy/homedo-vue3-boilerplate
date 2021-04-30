@@ -1,15 +1,14 @@
 import { DashboardRouting } from "@/views/dashboard/dashboard.routing";
 import { LoginRouting } from "@/views/login/login.routing";
 import { ErrorRouting } from "@/views/error/error.routing";
-import { ProjectRouting } from "@/views/project/project.routing";
+import { TemplateRouting } from "@/views/template/template.routing";
 import { RouterView } from "vue-router";
 
 const NotFoundRouting = {
   path: "/:pathMatch(.*)*",
   name: "not-found",
   redirect: "/error/404",
-  component: () =>
-    import(/* webpackChunkName: "404" */ "@/views/error/404.vue"),
+  component: () => import(/* webpackChunkName: "404" */ "@/views/error/404.vue"),
   children: [],
 };
 
@@ -35,9 +34,8 @@ export const AppRouting = [
     path: "/",
     name: "layout",
     redirect: "/dashboard",
-    component: () =>
-      import(/* webpackChunkName: "layout" */ "@/layout/index.vue"),
-    children: [DashboardRouting, ProjectRouting],
+    component: () => import(/* webpackChunkName: "layout" */ "@/layout/index.vue"),
+    children: [DashboardRouting, TemplateRouting],
   },
   LoginRouting,
   ErrorRouting,

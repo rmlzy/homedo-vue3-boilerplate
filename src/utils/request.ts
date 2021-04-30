@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const service = axios.create({
-  baseURL:
-    process.env.NODE_ENV === "development" ? "/" : process.env.VUE_APP_API,
+  baseURL: process.env.NODE_ENV === "development" ? "/" : process.env.VUE_APP_API,
   timeout: 20000,
 });
 

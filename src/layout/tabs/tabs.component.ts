@@ -1,12 +1,4 @@
-import {
-  defineComponent,
-  reactive,
-  computed,
-  toRefs,
-  unref,
-  provide,
-  watch,
-} from "vue";
+import { defineComponent, reactive, computed, toRefs, unref, provide, watch } from "vue";
 import {
   DownOutlined,
   ReloadOutlined,
@@ -123,8 +115,7 @@ export default defineComponent({
       store.commit("tabsView/closeCurrentTab", route);
       // 如果关闭的是当前页
       if (state.activeKey === route.fullPath) {
-        const currentRoute =
-          tabsList.value[Math.max(0, tabsList.value.length - 1)];
+        const currentRoute = tabsList.value[Math.max(0, tabsList.value.length - 1)];
         state.activeKey = currentRoute.fullPath;
         router.push(currentRoute);
       }

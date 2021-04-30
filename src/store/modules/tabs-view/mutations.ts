@@ -12,9 +12,7 @@ export const mutations = {
   addTabs(state: ITabsViewState, route): boolean {
     // 添加标签页
     if (whiteList.includes(route.name)) return false;
-    const isExists = state.tabsList.some(
-      (item) => item.fullPath == route.fullPath
-    );
+    const isExists = state.tabsList.some((item) => item.fullPath == route.fullPath);
     if (!isExists) {
       state.tabsList.push(route);
     }
@@ -22,29 +20,21 @@ export const mutations = {
   },
   closeLeftTabs(state: ITabsViewState, route) {
     // 关闭左侧
-    const index = state.tabsList.findIndex(
-      (item) => item.fullPath == route.fullPath
-    );
+    const index = state.tabsList.findIndex((item) => item.fullPath == route.fullPath);
     state.tabsList.splice(0, index);
   },
   closeRightTabs(state: ITabsViewState, route) {
     // 关闭右侧
-    const index = state.tabsList.findIndex(
-      (item) => item.fullPath == route.fullPath
-    );
+    const index = state.tabsList.findIndex((item) => item.fullPath == route.fullPath);
     state.tabsList.splice(index + 1);
   },
   closeOtherTabs(state: ITabsViewState, route) {
     // 关闭其他
-    state.tabsList = state.tabsList.filter(
-      (item) => item.fullPath == route.fullPath
-    );
+    state.tabsList = state.tabsList.filter((item) => item.fullPath == route.fullPath);
   },
   closeCurrentTab(state: ITabsViewState, route) {
     // 关闭当前页
-    const index = state.tabsList.findIndex(
-      (item) => item.fullPath == route.fullPath
-    );
+    const index = state.tabsList.findIndex((item) => item.fullPath == route.fullPath);
     state.tabsList.splice(index, 1);
   },
   closeAllTabs(state: ITabsViewState) {

@@ -1,10 +1,6 @@
 <template>
   <template v-if="!menuInfo.hidden">
-    <a-sub-menu
-      v-if="menuInfo.children?.length"
-      :key="menuInfo.name"
-      v-bind="$attrs"
-    >
+    <a-sub-menu v-if="menuInfo.children?.length" :key="menuInfo.name" v-bind="$attrs">
       <template #title>
         <component :is="menuInfo.meta?.icon"></component>
         <span>{{ menuInfo.meta?.title }}</span>

@@ -58,11 +58,7 @@
         </a>
         <template #overlay>
           <a-menu style="user-select: none">
-            <a-menu-item
-              key="1"
-              :disabled="activeKey !== route.fullPath"
-              @click="reloadPage"
-            >
+            <a-menu-item key="1" :disabled="activeKey !== route.fullPath" @click="reloadPage">
               <reload-outlined></reload-outlined>
               <span>刷新</span>
             </a-menu-item>

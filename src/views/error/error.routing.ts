@@ -12,8 +12,7 @@ export const ErrorRouting = {
       path: "/error/404",
       name: "error-404",
       meta: { title: "404" },
-      component: () =>
-        import(/* webpackChunkName: "404" */ "@/views/error/404.vue"),
+      component: () => import(/* webpackChunkName: "404" */ "@/views/error/404.vue"),
     },
   ],
 };

@@ -14,9 +14,7 @@
     </div>
     <div class="layout-sider__expand">
       <span class="menu-fold" @click="toggleCollapsed">
-        <component
-          :is="collapsed ? 'menu-unfold-outlined' : 'menu-fold-outlined'"
-        ></component>
+        <component :is="collapsed ? 'menu-unfold-outlined' : 'menu-fold-outlined'"></component>
       </span>
     </div>
   </a-layout-sider>

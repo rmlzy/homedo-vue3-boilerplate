@@ -1,9 +1,4 @@
-import {
-  createStore,
-  useStore as baseUseStore,
-  createLogger,
-  Store,
-} from "vuex";
+import { createStore, useStore as baseUseStore, createLogger, Store } from "vuex";
 import { App, InjectionKey } from "vue";
 import modules from "@/store/modules";
 import { IStore } from "./types";
@@ -16,10 +11,7 @@ const plugins = debug
   ? [
       createLogger({
         filter(mutation, stateBefore, stateAfter) {
-          const notNeedDebugs: string[] = [
-            "lockscreen/setLockTime",
-            "lockscreen/setLock",
-          ];
+          const notNeedDebugs: string[] = ["lockscreen/setLockTime", "lockscreen/setLock"];
           return !notNeedDebugs.includes(mutation.type);
         },
       }),
