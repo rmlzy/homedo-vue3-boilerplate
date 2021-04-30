@@ -1,7 +1,7 @@
 <template>
   <div class="logo">
     <img src="@/assets/images/logo.png" alt="" />
-    <h1 v-if="!collapsed">Vue3 Admin Boilerplate</h1>
+    <h1 v-if="!collapsed">Homedo Vue3 Boilerplate</h1>
   </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
     margin: 0 0 0 12px;
     color: #fff;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 32px;
   }
 }
