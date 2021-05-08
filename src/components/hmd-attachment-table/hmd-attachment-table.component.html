@@ -1,0 +1,16 @@
+<div class="hmd-attachment-table">
+  <div class="mb15">
+    <a-button type="primary">上传附件</a-button>
+    <a-button>删除选中</a-button>
+  </div>
+
+  <a-table row-key="id" :data-source="tableData" :columns="tableColumns">
+    <template #action="{ record }">
+      <a href="javascript:;">查看</a>
+      <a-divider type="vertical"></a-divider>
+      <a href="javascript:;">下载</a>
+      <a-divider type="vertical"></a-divider>
+      <a href="javascript:;">移除</a>
+    </template>
+  </a-table>
+</div>

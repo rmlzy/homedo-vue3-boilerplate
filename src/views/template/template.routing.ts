@@ -23,6 +23,7 @@ export const TemplateRouting = {
         import(/* webpackChunkName: "template" */ "@/views/template/form/index.vue"),
     },
     {
+      hidden: true,
       path: "/template/detail/:id",
       name: "template-detail",
       meta: { title: "详情页" },
